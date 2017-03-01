@@ -49,7 +49,6 @@ class MailchimpFormContent(models.Model):
             'list_id': self.list_id,
             'description': self.description,
             'placeholder': self.placeholder,
-            'lang': self.lang,
             'form_id': id(self),
             'email': email,
         }
