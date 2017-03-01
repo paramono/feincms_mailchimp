@@ -15,29 +15,28 @@ class MailchimpFormContent(models.Model):
         verbose_name_plural = "Mailchimp Forms"
 
     post_url = models.CharField(
+        _('POST URL'),
         max_length=2100,
         null=True)
 
     user_id = models.CharField(
+        _('User ID'),
         max_length=32,
         null=True)
 
     list_id = models.CharField(
+        _('List ID'),
         max_length=32,
         null=True)
 
     placeholder = models.CharField(
+        _('Placeholder'),
         max_length=50,
         blank=True, null=True)
 
     description = models.TextField(
+        _('Description'),
         blank=True, null=True)
-
-    lang = models.CharField(
-        verbose_name=_("Language"),
-        max_length=3,
-        default=LANGUAGES[0][0],
-        choices=LANGUAGES)
 
     def process(self, request, **kwargs):
         if request.method == 'GET':
