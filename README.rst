@@ -13,11 +13,6 @@ feincms_mailchimp
 
 MailChimp integration for FeinCMS
 
-Documentation
--------------
-
-The full documentation is at https://feincms_mailchimp.readthedocs.io.
-
 Quickstart
 ----------
 
@@ -31,22 +26,9 @@ Add it to your `INSTALLED_APPS`:
 
     INSTALLED_APPS = (
         ...
-        'feincms_mailchimp.apps.FeincmsMailchimpConfig',
+        'feincms_mailchimp',
         ...
     )
-
-Add feincms_mailchimp's URL patterns:
-
-.. code-block:: python
-
-    from feincms_mailchimp import urls as feincms_mailchimp_urls
-
-
-    urlpatterns = [
-        ...
-        url(r'^', include(feincms_mailchimp_urls)),
-        ...
-    ]
 
 Features
 --------
